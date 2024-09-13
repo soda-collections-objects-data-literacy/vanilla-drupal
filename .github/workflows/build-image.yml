@@ -38,6 +38,7 @@ jobs:
           registry: ${{ env.REGISTRY }}
       - uses: docker/build-push-action@v6
         with:
+          description: "Plain vanilla Drupal with preinstalled Site based one the given env variables."
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           platforms: ${{ env.PLATFORMS }}
